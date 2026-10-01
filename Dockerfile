@@ -37,9 +37,11 @@ RUN python3 -c "from insightface.app import FaceAnalysis; app = FaceAnalysis(nam
 # Copy application source code
 COPY app /workspace/app
 COPY handler.py /workspace/handler.py
+COPY src /workspace/src
 
 # Verify files exist
-RUN ls -la /workspace
+RUN ls -la /workspace && ls -la /workspace/src
 
-# Entrypoint: Start official RunPod Serverless handler loop
-CMD ["python3", "-u", "handler.py"]
+# Entrypoint: Start official RunPod Serverless handler loop via src/handler.py
+CMD ["python3", "-u", "src/handler.py"]
+
