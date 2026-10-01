@@ -280,5 +280,6 @@ def handler(event: Dict[str, Any]) -> Dict[str, Any]:
 
 
 # Start RunPod Serverless Worker loop
-if __name__ == "__main__":
-    runpod.serverless.start({"handler": handler})
+# NOTE: Must be at module level (NOT inside `if __name__ == "__main__":`)
+# so that RunPod's repo scanner can detect the entry point.
+runpod.serverless.start({"handler": handler})
