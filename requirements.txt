@@ -1,0 +1,28 @@
+# RunPod Serverless Python SDK
+runpod>=1.7.0
+
+# InsightFace Deep Face Recognition & Detection
+insightface>=0.7.3
+
+# ONNX Runtime with NVIDIA CUDA acceleration
+onnxruntime-gpu>=1.17.0
+
+# Image Processing (Headless for server environments)
+opencv-python-headless>=4.9.0.80
+pillow>=10.2.0
+
+# Numerical Computing (NumPy 1.x pinned for InsightFace compatibility)
+numpy>=1.24.0,<2.0.0
+
+# Network & Storage
+requests>=2.31.0
+urllib3>=2.0.0
+
+# Vector Database Client
+qdrant-client>=1.9.0
+
+# Data Validation & Serialization
+pydantic>=2.7.0
+
+# Testing & Quality Assurance
+pytest>=8.0.0
